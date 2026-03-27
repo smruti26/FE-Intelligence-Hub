@@ -11,8 +11,8 @@ import App            from '@app/App';
 // Original CSS extracted verbatim from source HTML (full visual parity)
 import './assets/styles/original.css';
 
-// Animation bridge is loaded via public/bridge.js script tag in index.html
-// (bypasses Babel to speed up build — bridge.js is plain vanilla JS)
+// Animation bridge — loads all 243 canvas functions into window scope
+import './utils/animations/bridge.js';
 
 const root = document.getElementById('root');
 if (!root) throw new Error('[FE Hub] #root element not found in public/index.html');
